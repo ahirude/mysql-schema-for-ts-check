@@ -8,7 +8,11 @@
     "mysql2": "^2.2.5",
     "p-map": "^4.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0",
+    "webpack-node-externals": "^2.5.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
