@@ -135,7 +135,7 @@ const generate = async (params) => {
 
 const main = async () => {
   if (! ('src' in options)) {
-    console.error('mysql uri is required. ex mysql://root@pass:server.com/DABASE[/TABLE]');
+    console.error('mysql uri is required. ex mysql://root:pass@server.com/DABASE[/TABLE]');
     process.exit();
   }
   const uri = new URL(options.src);
