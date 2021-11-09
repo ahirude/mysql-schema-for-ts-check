@@ -17,9 +17,7 @@ In program.js
 ```
 // @ts-check
 
-const MyDB = require('./MyDB');
-
-/** @type {MyDB.tablename} */
+/** @type {import('./MyDB').tablename} */
 const obj = {
   id: ...
 };
