@@ -40,8 +40,8 @@ const makeEnumMap = async (params, lines) => {
   const [enumList] = await params.conn.query(sql, [params.database]);
   enumList.forEach((row) => {
     if (enumToTypeMap.has(row.COLUMN_TYPE))  return;
-    const declare = row.COLUMN_TYPE.replace('enum(', '').replace(')', '').replace(/,/g, ' | ');
-    enumToTypeMap.set(row.COLUMN_TYPE, declare);
+    const declare = row.COLUMN_TYPE.replace('enum(', '').replace(')', '').replace(/,/g, ' | '); // "'Y' | 'N'""
+    enumToTypeMap.set(row.COLUMN_TYPE, `string | (${declare})`); // for working with JS on VS-Code
   });
 };
 
