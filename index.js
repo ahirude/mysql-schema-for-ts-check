@@ -2,8 +2,8 @@
 'use strict';
 
 // usage
-//   node index.js mysql://root:passwd@mysql-server.example.com/database [-dir destdir] [-jsdoc]
-//   node index.js mysql://root:passwd@mysql-server.example.com/database/table [-dir destdir] [-jsdoc]
+//   node index.js mysql://root:passwd@mysql-server.example.com/database [-d destdir] [-j]
+//   node index.js mysql://root:passwd@mysql-server.example.com/database/table [-d destdir] [-j]
 
 const pMap = require('p-map');
 const mysql = require('mysql2/promise');

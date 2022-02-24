@@ -4,7 +4,7 @@ This program will make index.d.ts, which can be used with VS Code IntelliSense (
 ```
 usage)
 npm install --production
-node index.js mysql://user:pwd@db.server.com/MyDB[/tablename] [-d save_dir]
+node index.js mysql://user:pwd@db.server.com/MyDB[/tablename] [-d save_dir] [-j]
 -or-
 npm install
 npx webpack
@@ -13,7 +13,7 @@ cd ../your-project/
 node mysql-schema.js mysql://...
 ```
 
-In program.js
+To use output file
 ```
 // @ts-check
 
@@ -22,3 +22,13 @@ const obj = {
   id: ...
 };
 ```
+
+with -j option
+```
+// @ts-check
+
+/** @typedef {import('./MyDB').tablename} TableName */
+/** @type {TableName} */
+const obj = {
+  id: ...
+};
